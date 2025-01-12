@@ -8,6 +8,9 @@ import cors from "cors";
 import { app,server } from "./lib/socket.js";
 import path from "path";
 
+const __dirname = path.resolve();
+dotenv.config();
+const PORT = process.env.PORT;
 
 app.use(
     cors({
@@ -29,11 +32,6 @@ if(process.env.NODE_ENV === 'production'){
         res.sendFile(path.join(__dirname,"../frontend","build","index.html"));
     })
 }
-
-dotenv.config();
-const PORT = process.env.PORT;
-const __dirname = path.resolve();
-
 
 server.listen(PORT,()=>{
     console.log(`Server running on port:${PORT}`);
