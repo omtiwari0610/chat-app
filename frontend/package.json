@@ -1,0 +1,11 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "chat-app": "file:..",
+    "react-scripts": "^5.0.1"
+  }
+}
